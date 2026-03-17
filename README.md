@@ -116,39 +116,43 @@ hea_parent/
 └── README.md
 ```
 
-Current Development Progress
- Completed
- Overall project structure and SOA architecture design
- Development of the common module:
-	·Database connection pool configuration and multi-data source support
-	·Encapsulation of basic utility classes (date, encryption, validation, etc.)
-	·MyBatis general Mapper and pagination plugin integration
-	·Dubbo + Zookeeper service configuration
-In Progress
- Implementation of business service modules (user, message, health management, etc.)
- WeChat Official Account message receiving and response interfaces
- Backend management pages and permission control
- Lua script optimization for high-concurrency business logic
-To Do
- Frontend page implementation (Vue + Element UI)
- Page staticization with Freemarker
- API documentation and automated testing
- Service monitoring and log collection
 
-Quick Start (Development Environment)
-Note: The project is currently in the backend development stage, and no runnable demo is available yet. Below is a guide for setting up the development environment.
-JDK 1.8+
-MySQL 5.7+
-Zookeeper 3.4+
-Maven 3.6+
+## Current Development Progress
 
-Project Features
-	Distributed Architecture: SOA + Dubbo + Zookeeper, supporting horizontal service scaling
-	High-Concurrency Optimization: Lua scripts for performance improvement in core business modules
-	Security & Reliability: Fine-grained permission control via Spring Security
-	Maintainability: Reusable common modules and clean code structure
-	Frontend-Backend Separation: Vue.js + Freemarker for page staticization, improving access speed
+### Completed
+- Overall project structure and SOA architecture design
+- Development of the common module
+- Database connection pool configuration and multi-data source support
+- Encapsulation of basic utility classes (date, encryption, validation, etc.)
+- MyBatis general Mapper and pagination plugin integration
+- Dubbo + Zookeeper service configuration
 
+### In Progress
+- Implementation of business service modules (user, message, health management, etc.)
+- WeChat Official Account message receiving and response interfaces
+- Backend management pages and permission control
+- Lua script optimization for high-concurrency business logic
 
+### To Do
+- Frontend page implementation (Vue + Element UI)
+- Page staticization with Freemarker
+- API documentation and automated testing
+- Service monitoring and log collection
+
+## Quick Start (Development Environment)
+Note: The project is currently in the backend development stage, and no runnable demo is available yet.
+Below is a guide for setting up the development environment.
+
+- JDK 1.8+
+- MySQL 5.7+
+- Zookeeper 3.4+
+- Maven 3.6+
+
+## Project Features
+- Distributed Architecture: SOA + Dubbo + Zookeeper, supporting horizontal service scaling
+- High-Concurrency Optimization: Lua scripts for performance improvement in core business modules
+- Security & Reliability: Fine-grained permission control via Spring Security
+- Maintainability: Reusable common modules and clean code structure
+- Frontend-Backend Separation: Vue.js + Freemarker for page staticization, improving access speed
 
 

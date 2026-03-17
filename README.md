@@ -42,14 +42,14 @@ This project adopts SOA (Service-Oriented Architecture), vertically splitting th
 
 Module Structure
 
---hea_parent
----hea_common	 # Common Module (Completed)
-----pom.xml
-----src
------constant
-------MessageConstant.java
-------Result.java
-------Rsp.java
+hea_parent
+|--hea_common	 # Common Module (Completed)
+   |--pom.xml
+   |--src
+      |--constant
+         |--MessageConstant.java
+         |--Result.java
+         |--Rsp.java
 -----entity		# Public entity classes
 ------PageResult.java
 ------QueryPageBean.java

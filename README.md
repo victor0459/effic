@@ -41,84 +41,85 @@ This project adopts SOA (Service-Oriented Architecture), vertically splitting th
 ·High-Concurrency Optimization: Lua scripts are used to boost performance in core high-traffic business modules
 
 Module Structure
-
-hea_parent
-|--hea_common	 # Common Module (Completed)
-   |--pom.xml
-   |--src
-      |--constant
-         |--MessageConstant.java
-         |--Result.java
-         |--Rsp.java
------entity		# Public entity classes
-------PageResult.java
-------QueryPageBean.java
-------Res.java
------exception
-------HealthException.java
------utils		# Public utility classes (date, encryption, string processing, etc.)
-------DateUtils.java
-------POIUtils.java
-------ValidateCodeUtils.java
-│   ├── health_dao	| Encapsulation of general data access layer
-│   │   ├── pom.xml
-│   │   └── src
-│   │       └── main
-│   │           ├── java
-│   │           │   └── com
-│   │           │       └── itvictor
-│   │           │           └── health
-│   │           │               └── dao
-│   │           │                   ├── CheckGroupDao.java
-│   │           │                   ├── CheckItemDao.java
-│   │           │                   ├── MemberDao.java
-│   │           │                   ├── OrderDao.java
-│   │           │                   ├── OrderSettingDao.java
-│   │           │                   ├── SetmealDao.java
-│   │           │                   └── UserDao.java
-│   │           └── resources
-│   │               ├── applicationContext-dao.xml
-│   │               ├── com
-│   │               │   └── itvictor
-│   │               │       └── health
-│   │               │           └── dao
-│   │               │               ├── CheckGroupDao.xml
-│   │               │               ├── CheckItemDao.xml
-│   │               │               ├── MemberDao.xml
-│   │               │               ├── OrderDao.xml
-│   │               │               ├── OrderSettingDao.xml
-│   │               │               ├── SetmealDao.xml
-│   │               │               └── UserDao.xml
-│   │               ├── log4j.properties
-│   │               └── sqlMapConfig.xml
-│   ├── health_interface	# Business Service Layer (Under Development)
-│   │   └── src
-│   │       └── main
-│   │           └── java
-│   │               └── com
-│   │                   └── itvictor
-│   │                       └── health
-│   │                           └── service
-│   │                               ├── CheckGroupService.java
-│   │                               ├── CheckItemService.java
-│   │                               ├── MemberService.java
-│   │                               ├── OrderService.java
-│   │                               ├── OrderSettingService.java
-│   │                               ├── ReportService.java
-│   │                               ├── SetmealService.java
-│   │                               └── UserService.java
-│   └── health_jobs	# Configuration classes (data source, Dubbo, Zookeeper, etc.)
-│       └── src
-│           └── main
-│               ├── java
-│               │   └── com
-│               │       └── itvictor
-│               │           └── health
-│               │               └── job
-│               │                   ├── CleanImgJob.java
-│               │                   └── JobApplication.java
-│               └── resources
-│                   └── spring-jobs.xml
+Project Structure
+-----------------
+hea_parent/
+├── hea_common/	# Common Module (Completed)
+│   ├── pom.xml
+│   └── src/
+│       ├── constant/	
+│       │   ├── MessageConstant.java
+│       │   ├── Result.java
+│       │   └── Rsp.java
+│       ├── entity/	# Public entity classes
+│       │   ├── PageResult.java
+│       │   ├── QueryPageBean.java
+│       │   └── Res.java
+│       ├── exception/
+│       │   └── HealthException.java
+│       └── utils/	# Public utility classes (date, encryption, string processing, etc.)
+│           ├── DateUtils.java
+│           ├── POIUtils.java
+│           └── ValidateCodeUtils.java
+├── health_dao/	| Encapsulation of general data access layer
+│   ├── pom.xml
+│   └── src/
+│       └── main/
+│           ├── java/
+│           │   └── com/
+│           │       └── itvictor/
+│           │           └── health/
+│           │               └── dao/
+│           │                   ├── CheckGroupDao.java
+│           │                   ├── CheckItemDao.java
+│           │                   ├── MemberDao.java
+│           │                   ├── OrderDao.java
+│           │                   ├── OrderSettingDao.java
+│           │                   ├── SetmealDao.java
+│           │                   └── UserDao.java
+│           └── resources/
+│               ├── applicationContext-dao.xml
+│               ├── log4j.properties
+│               ├── sqlMapConfig.xml
+│               └── com/
+│                   └── itvictor/
+│                       └── health/
+│                           └── dao/
+│                               ├── CheckGroupDao.xml
+│                               ├── CheckItemDao.xml
+│                               ├── MemberDao.xml
+│                               ├── OrderDao.xml
+│                               ├── OrderSettingDao.xml
+│                               ├── SetmealDao.xml
+│                               └── UserDao.xml
+├── health_interface/	# Business Service Layer (Under Development)
+│   └── src/
+│       └── main/
+│           └── java/
+│               └── com/
+│                   └── itvictor/
+│                       └── health/
+│                           └── service/
+│                               ├── CheckGroupService.java
+│                               ├── CheckItemService.java
+│                               ├── MemberService.java
+│                               ├── OrderService.java
+│                               ├── OrderSettingService.java
+│                               ├── ReportService.java
+│                               ├── SetmealService.java
+│                               └── UserService.java
+├── health_jobs/	# Configuration classes (data source, Dubbo, Zookeeper, etc.)
+│   └── src/
+│       └── main/
+│           ├── java/
+│           │   └── com/
+│           │       └── itvictor/
+│           │           └── health/
+│           │               └── job/
+│           │                   ├── CleanImgJob.java
+│           │                   └── JobApplication.java
+│           └── resources/
+│               └── spring-jobs.xml
 ├── LICENSE
 └── README.md
 

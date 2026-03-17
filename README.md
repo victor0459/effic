@@ -1,48 +1,37 @@
 # effic
 A WeChat Official Account Backend Service Project (Java + SOA Distributed Architecture)
 
-
 ## Project Introduction
-effic is an enterprise-level backend service project for WeChat Official Account scenarios, designed with the SOA (Service-Oriented Architecture) paradigm. It aims to build a highly available, high-concurrency, and easily scalable backend service system for WeChat Official Accounts.
-## Core Objectives:
-	- Provide stable backend support for health management-focused WeChat Official Accounts
-	- Enable distributed service governance and flexible business expansion
-	- Ensure service performance and data security in high-concurrency scenarios
-## Current Stage: 
-	Backend core module under active development, with basic common modules completed and ongoing iteration.
+effic is an enterprise-level backend service project for WeChat Official Account scenarios, designed with the SOA (Service-Oriented Architecture) paradigm.
+It aims to build a highly available, high-concurrency, and easily scalable backend service system for WeChat Official Accounts.
+
+## Core Objectives
+- Provide stable backend support for health management-focused WeChat Official Accounts
+- Enable distributed service governance and flexible business expansion
+- Ensure service performance and data security in high-concurrency scenarios
+
+## Current Stage
+Backend core module under active development, with basic common modules completed and ongoing iteration.
 
 ## Tech Stack
-Backend
-	Technology	Purpose
-	Java	Core development language
-	SOA Architecture	Service-oriented distributed system design
-	Dubbo	Service governance and RPC remote procedure calls
-	Zookeeper	Service registration, discovery, and health check center
-	Spring MVC	Web framework for handling HTTP requests
-	Spring Security	Permission control and user authentication & authorization
-	MySQL	Relational database for core business data storage
-	MyBatis	ORM framework for database access encapsulation
-	Lua	Performance optimization for high-concurrency business modules
-	Git	Distributed version control system
-Frontend
-	Technology	Purpose
-	Vue.js	Core frontend framework
-	Element UI	UI component library for rapid page construction
-	Bootstrap	Responsive layout framework
-	Ajax	Asynchronous data interaction between frontend and backend
-	Freemarker	Template engine for page staticization optimization
 
-Project Architecture
-Overall Architecture
+### Backend
+Java, SOA Architecture, Dubbo, Zookeeper, Spring MVC, Spring Security, MySQL, MyBatis, Lua, Git
+
+### Frontend
+Vue.js, Element UI, Bootstrap, Ajax, Freemarker
+
+## Project Architecture
 This project adopts SOA (Service-Oriented Architecture), vertically splitting the system into independent services by business domain:
-·Service Layer: Split by business domains (e.g., User Service, Message Service, Health Assessment Service)
-·Registry Center: Zookeeper manages service registration, discovery, and health checks
-·Service Invocation: Dubbo enables transparent RPC calls across services
-·Data Layer: Unified MySQL + MyBatis persistence layer, supporting transactions and sharding
-·Common Layer: Encapsulates universal utilities, data source connections, and common functions for reuse across all services
-·High-Concurrency Optimization: Lua scripts are used to boost performance in core high-traffic business modules
 
-Module Structure
+- Service Layer: Split by business domains (User Service, Message Service, Health Assessment Service)
+- Registry Center: Zookeeper manages service registration, discovery, and health checks
+- Service Invocation: Dubbo enables transparent RPC calls across services
+- Data Layer: Unified MySQL + MyBatis persistence layer
+- Common Layer: Encapsulates universal utilities, data source connections
+- High-Concurrency Optimization: Lua scripts improve performance in high-traffic modules
+
+## Module Structure
 ```
 Project Structure
 -----------------

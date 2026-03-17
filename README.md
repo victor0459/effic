@@ -41,6 +41,7 @@ This project adopts SOA (Service-Oriented Architecture), vertically splitting th
 ·High-Concurrency Optimization: Lua scripts are used to boost performance in core high-traffic business modules
 
 Module Structure
+```
 Project Structure
 -----------------
 hea_parent/
@@ -122,6 +123,7 @@ hea_parent/
 │               └── spring-jobs.xml
 ├── LICENSE
 └── README.md
+```
 
 Current Development Progress
  Completed
